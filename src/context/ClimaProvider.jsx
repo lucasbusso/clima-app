@@ -4,20 +4,26 @@ const ClimaContext = createContext()
 
 const ClimaProvider = ({children}) => {
 
-    const [ busqueda,setBusqueda ] = useState({
+    import.meta.env.VITE.API.KEY.
+
+    const [ busqueda, setBusqueda ] = useState({
         ciudad:'',
         pais:''
     })
 
-    const datosBusquedas = e => {
+    const datosBusqueda = e => {
         setBusqueda({
             ...busqueda,
             [e.target.name] : e.target.value
         })
     }
+
+    const consultarClima = datos => {
+
+    }
     return(
         <ClimaContext.Provider
-            value={{ busqueda, datosBusquedas}}
+            value={{ busqueda, datosBusqueda, consultarClima }}
         >
             {children}
         </ClimaContext.Provider>

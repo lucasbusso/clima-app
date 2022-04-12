@@ -15,7 +15,6 @@ const Formulario = () => {
         }
         setAlerta('')
         consultarClima(busqueda)
-
     }
 
   return (
